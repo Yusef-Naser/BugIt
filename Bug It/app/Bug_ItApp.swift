@@ -35,10 +35,25 @@ struct Bug_ItApp: App {
     
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     
+    @StateObject var appRouter = AppRouter()
+    
     var body: some Scene {
         WindowGroup {
-            //ContentView()
-            LoginView()
+            NavigationStack(path: $appRouter.rootPath) {
+                
+                NavigationView()
+                    .navigationDestination(for: Route.self ) { $0 }
+//                if let _ = LoginUserCase().getUserObject() {
+//                    BugItView()
+//                        .navigationDestination(for: Route.self ) { $0 }
+//                }else {
+//                    LoginView()
+//                        .navigationDestination(for: Route.self ) { $0 }
+//                }
+                
+                
+            }
+            .environmentObject(appRouter)
         }
     }
 }

@@ -11,7 +11,7 @@ class LoginUserCase {
     
     private var repo : LoginRepo
     
-    init(repo: LoginRepo) {
+    init(repo: LoginRepo = LoginRepository()) {
         self.repo = repo
     }
     

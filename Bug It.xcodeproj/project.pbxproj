@@ -21,6 +21,16 @@
 		2C0D1A0C2C8E37B0003E8C8C /* Bug_ItApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0D1A022C8E37B0003E8C8C /* Bug_ItApp.swift */; };
 		2C0D1A0F2C8E37C7003E8C8C /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 2C0D1A0E2C8E37C7003E8C8C /* GoogleSignIn */; };
 		2C0D1A112C8E37C7003E8C8C /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2C0D1A102C8E37C7003E8C8C /* GoogleSignInSwift */; };
+		2C0D1A172C8E458C003E8C8C /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0D1A132C8E458C003E8C8C /* AppRouter.swift */; };
+		2C0D1A192C8E458C003E8C8C /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0D1A152C8E458C003E8C8C /* Route.swift */; };
+		2C0D1A1B2C8E4600003E8C8C /* Debuging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0D1A1A2C8E4600003E8C8C /* Debuging.swift */; };
+		2C0D1A1E2C8E4766003E8C8C /* BugItView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0D1A1D2C8E4766003E8C8C /* BugItView.swift */; };
+		2C0D1A232C8E4E7E003E8C8C /* NavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0D1A222C8E4E7E003E8C8C /* NavigationView.swift */; };
+		2C14D3D12C8F21A5006743FE /* AlertModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C14D3D02C8F21A5006743FE /* AlertModifier.swift */; };
+		2C14D3D32C8F21F7006743FE /* BugItViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C14D3D22C8F21F7006743FE /* BugItViewModel.swift */; };
+		2C14D3D82C8F2251006743FE /* ButItRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C14D3D72C8F2251006743FE /* ButItRepo.swift */; };
+		2C14D3DA2C8F22B1006743FE /* BugItUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C14D3D92C8F22B1006743FE /* BugItUseCase.swift */; };
+		2C14D3DD2C8F2322006743FE /* BugItRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C14D3DC2C8F2322006743FE /* BugItRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +48,16 @@
 		2C0D1A002C8E37B0003E8C8C /* KeychainManger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainManger.swift; sourceTree = "<group>"; };
 		2C0D1A022C8E37B0003E8C8C /* Bug_ItApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bug_ItApp.swift; sourceTree = "<group>"; };
 		2C0D1A122C8E37EA003E8C8C /* Bug-It-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Bug-It-Info.plist"; sourceTree = SOURCE_ROOT; };
+		2C0D1A132C8E458C003E8C8C /* AppRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		2C0D1A152C8E458C003E8C8C /* Route.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
+		2C0D1A1A2C8E4600003E8C8C /* Debuging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debuging.swift; sourceTree = "<group>"; };
+		2C0D1A1D2C8E4766003E8C8C /* BugItView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BugItView.swift; sourceTree = "<group>"; };
+		2C0D1A222C8E4E7E003E8C8C /* NavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationView.swift; sourceTree = "<group>"; };
+		2C14D3D02C8F21A5006743FE /* AlertModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertModifier.swift; sourceTree = "<group>"; };
+		2C14D3D22C8F21F7006743FE /* BugItViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BugItViewModel.swift; sourceTree = "<group>"; };
+		2C14D3D72C8F2251006743FE /* ButItRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButItRepo.swift; sourceTree = "<group>"; };
+		2C14D3D92C8F22B1006743FE /* BugItUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BugItUseCase.swift; sourceTree = "<group>"; };
+		2C14D3DC2C8F2322006743FE /* BugItRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BugItRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +192,7 @@
 		2C0D19FF2C8E37B0003E8C8C /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				2C0D1A1C2C8E4759003E8C8C /* bugit */,
 				2C0D19FE2C8E37B0003E8C8C /* Login */,
 			);
 			path = Scenes;
@@ -181,6 +202,8 @@
 			isa = PBXGroup;
 			children = (
 				2C0D1A002C8E37B0003E8C8C /* KeychainManger.swift */,
+				2C0D1A1A2C8E4600003E8C8C /* Debuging.swift */,
+				2C14D3D02C8F21A5006743FE /* AlertModifier.swift */,
 			);
 			path = utilities;
 			sourceTree = "<group>";
@@ -188,9 +211,88 @@
 		2C0D1A032C8E37B0003E8C8C /* app */ = {
 			isa = PBXGroup;
 			children = (
+				2C0D1A162C8E458C003E8C8C /* AppRouter */,
 				2C0D1A022C8E37B0003E8C8C /* Bug_ItApp.swift */,
 			);
 			path = app;
+			sourceTree = "<group>";
+		};
+		2C0D1A162C8E458C003E8C8C /* AppRouter */ = {
+			isa = PBXGroup;
+			children = (
+				2C0D1A132C8E458C003E8C8C /* AppRouter.swift */,
+				2C0D1A152C8E458C003E8C8C /* Route.swift */,
+				2C0D1A222C8E4E7E003E8C8C /* NavigationView.swift */,
+			);
+			path = AppRouter;
+			sourceTree = "<group>";
+		};
+		2C0D1A1C2C8E4759003E8C8C /* bugit */ = {
+			isa = PBXGroup;
+			children = (
+				2C0D1A212C8E4B0D003E8C8C /* Data */,
+				2C0D1A202C8E4B09003E8C8C /* Domain */,
+				2C0D1A1F2C8E4B04003E8C8C /* Presentation */,
+			);
+			path = bugit;
+			sourceTree = "<group>";
+		};
+		2C0D1A1F2C8E4B04003E8C8C /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				2C0D1A1D2C8E4766003E8C8C /* BugItView.swift */,
+				2C14D3D22C8F21F7006743FE /* BugItViewModel.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		2C0D1A202C8E4B09003E8C8C /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				2C14D3D62C8F2241006743FE /* UseCase */,
+				2C14D3D52C8F2236006743FE /* Repository */,
+				2C14D3D42C8F222E006743FE /* Entities */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		2C0D1A212C8E4B0D003E8C8C /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				2C14D3DB2C8F2304006743FE /* RepositoryImp */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		2C14D3D42C8F222E006743FE /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		2C14D3D52C8F2236006743FE /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				2C14D3D72C8F2251006743FE /* ButItRepo.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		2C14D3D62C8F2241006743FE /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				2C14D3D92C8F22B1006743FE /* BugItUseCase.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		2C14D3DB2C8F2304006743FE /* RepositoryImp */ = {
+			isa = PBXGroup;
+			children = (
+				2C14D3DC2C8F2322006743FE /* BugItRepository.swift */,
+			);
+			path = RepositoryImp;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,15 +373,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C0D1A232C8E4E7E003E8C8C /* NavigationView.swift in Sources */,
+				2C14D3DA2C8F22B1006743FE /* BugItUseCase.swift in Sources */,
 				2C0D1A082C8E37B0003E8C8C /* LoginUserCase.swift in Sources */,
 				2C0D1A092C8E37B0003E8C8C /* LoginView.swift in Sources */,
 				2C0D1A072C8E37B0003E8C8C /* LoginRepo.swift in Sources */,
+				2C14D3D12C8F21A5006743FE /* AlertModifier.swift in Sources */,
 				2C0D19E42C8E376A003E8C8C /* ContentView.swift in Sources */,
+				2C14D3D32C8F21F7006743FE /* BugItViewModel.swift in Sources */,
 				2C0D1A0A2C8E37B0003E8C8C /* LoginViewModel.swift in Sources */,
 				2C0D1A0B2C8E37B0003E8C8C /* KeychainManger.swift in Sources */,
 				2C0D1A0C2C8E37B0003E8C8C /* Bug_ItApp.swift in Sources */,
 				2C0D1A052C8E37B0003E8C8C /* LoginRepository.swift in Sources */,
+				2C0D1A192C8E458C003E8C8C /* Route.swift in Sources */,
+				2C0D1A1E2C8E4766003E8C8C /* BugItView.swift in Sources */,
+				2C0D1A172C8E458C003E8C8C /* AppRouter.swift in Sources */,
+				2C0D1A1B2C8E4600003E8C8C /* Debuging.swift in Sources */,
 				2C0D1A062C8E37B0003E8C8C /* GoogleUserWrapper.swift in Sources */,
+				2C14D3D82C8F2251006743FE /* ButItRepo.swift in Sources */,
+				2C14D3DD2C8F2322006743FE /* BugItRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

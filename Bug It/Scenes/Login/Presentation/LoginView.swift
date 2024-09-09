@@ -13,6 +13,8 @@ struct LoginView : View {
     
     @StateObject var loginViewodel = LoginViewModel()
     
+    @EnvironmentObject var appRouter : AppRouter
+    
     var body: some View {
         ZStack {
             Button(action: signIn) {
@@ -21,6 +23,9 @@ struct LoginView : View {
                     .foregroundColor(.blue)
             }
         }
+        .onAppear(perform: {
+            print(appRouter.rootPath)
+        })
     }
     
     

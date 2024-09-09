@@ -48,38 +48,24 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "20"
             endingLineNumber = "20"
-            landmarkName = "googleLogin()"
+            landmarkName = "googleLogin(successCompletion:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "3E268487-D8C9-4F4C-A606-4F17EAED41BB - 968778a7a8ac6f63"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Bug_It.LoginViewModel.googleLogin() -&gt; ()"
-                  moduleName = "Bug It"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/yusefnaser/Desktop/Bug%20It/Bug%20It/Scenes/Login/Presentation/LoginViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "20"
-                  endingLineNumber = "20">
-               </Location>
-               <Location
-                  uuid = "3E268487-D8C9-4F4C-A606-4F17EAED41BB - f0f0e80b286adf21"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Bool&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Bug_It.LoginViewModel.googleLogin() -&gt; ()"
-                  moduleName = "Bug It"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/yusefnaser/Desktop/Bug%20It/Bug%20It/Scenes/Login/Presentation/LoginViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "22"
-                  endingLineNumber = "22">
-               </Location>
-            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A272F7FB-653E-48DC-A3EE-03A09245B344"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Bug It/Scenes/Login/Presentation/LoginView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "body"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
