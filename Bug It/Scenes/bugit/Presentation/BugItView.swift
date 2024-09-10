@@ -14,7 +14,8 @@ struct BugItView : View {
     @State private var selectedImage: UIImage? = nil
     @State private var selectedItems: [PhotosPickerItem] = []
     @State private var strDescription = ""
-    
+    @State private var imageUrl = ""
+    @StateObject var viewModel = BugItViewModel()
     
     var body: some View {
         ZStack {
@@ -82,13 +83,13 @@ struct BugItView : View {
                     }
                 }
                 
-                Button(action: {
-                    
-                }, label: {
-                    Text("Upload Image")
-                    
-                })
+                if !imageUrl.isEmpty {
+                    Link("Link Image", destination: URL(string: imageUrl)!)
+                        .padding()
+                }
                 
+               
+                createHorizontalButtons
                 
                 Spacer()
                 
@@ -99,12 +100,60 @@ struct BugItView : View {
                 }
                 
             }
+            viewModel.loadingView()
         }
-        .centralizedAlert(showAlert: <#T##Binding<Bool>#>, title: <#T##String#>, message: <#T##String#>)
+        .centralizedAlert(showAlert: $viewModel.showAlert, title: viewModel.alertTitle, message: viewModel.alertMessage)
+    }
+    
+    var createHorizontalButtons : some View {
+        HStack {
+            Button(action: {
+                if let image = selectedImage , let actualImage = image.jpegData(compressionQuality: 1){
+                    viewModel.uploadImage(description: strDescription, image: actualImage) { url in
+                        if let url = url {
+                            self.imageUrl = url
+                            strDescription = ""
+                            selectedItems = []
+                            selectedImage = nil
+                        }
+                    }
+                }
+            }) {
+                Text("Upload Image")
+                    .font(.headline)
+                    .foregroundColor(.white)
+                    .padding()
+            }
+            .background(Color.blue)
+            .cornerRadius(10)
+            .shadow(radius: 5)
+            .padding()
+            
+            if !imageUrl.isEmpty {
+                Button(action: {
+                    viewModel.updateSheet(description: strDescription , imageLink: imageUrl) {
+                        
+                    }
+                }) {
+                    Text("Update Sheet")
+                        .font(.headline)
+                        .foregroundColor(.white)
+                        .padding()
+                }
+                .background(Color.blue)
+                .cornerRadius(10)
+                .shadow(radius: 5)
+                .padding()
+            }
+            
+        }
+        .padding()
     }
     
     func logOut () {
         appRouter.rebaseTo(.loginScreen )
     }
+    
+    
     
 }

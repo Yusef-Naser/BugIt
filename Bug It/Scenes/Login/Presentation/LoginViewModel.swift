@@ -7,7 +7,7 @@
 
 import Foundation
 
-class LoginViewModel : ObservableObject {
+class LoginViewModel : BaseViewModel {
     
     @Published var useCase : LoginUserCase
     

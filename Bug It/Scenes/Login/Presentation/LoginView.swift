@@ -23,16 +23,13 @@ struct LoginView : View {
                     .foregroundColor(.blue)
             }
         }
-        .onAppear(perform: {
-            print(appRouter.rootPath)
-        })
     }
     
     
     private func signIn() {
         
         loginViewodel.googleLogin { success in
-            
+            appRouter.pushTo(.bugItScreen)
         }
         
     }
