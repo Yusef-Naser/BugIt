@@ -104,7 +104,12 @@ class ApiClient {
                 #endif
                 let decoder = JSONDecoder()
                 let decodedData = try decoder.decode(T.self, from: data)
+                
                 guard (200...299).contains(httpResponse.statusCode) else {
+                    if let sheetResponse = decodedData as? SheetResponse {
+                        completionError(NetworkError(code: sheetResponse.error?.code ?? 0, message: sheetResponse.error?.message ?? "InvalidError"))
+                        return
+                    }
                     completionError(NetworkError(code: httpResponse.statusCode, message: "InvalidError"))
                     return
                 }

@@ -11,35 +11,18 @@ import Combine
 class BugItRepository : BugItRepo {
     
     var cancellables = Set<AnyCancellable>()
-    
-    func uploadImage( image: Data) async throws -> ImageResponse? {
-        
-        let request = BaseRequest(endPoint: EndPoints.uploadImage.path , httpMethod: .post , type: .upload)
-        
-      //  request.parameters =  [
-          //  "title" : "" ,
-           // "description" : description
-      //  ]
-        
-        let imageData = ImageData(withImage: image , forKey: "image")
-        
-        request.parametersUploadImage = [imageData]
-        
-        
-        return try await withCheckedThrowingContinuation { continuation in
-            ApiClient.shared.uploadRequest(url: request , type: ImageResponse.self) { response in
-                
-                continuation.resume(returning: response)
-                
-            } completionError: { error in
-                continuation.resume(throwing: error)
-            }
 
-        }
+    func updateSheet(description: String, priority: Fields.Values, labels: Fields.Values, assignee: Fields.Values, imageLinks: [String]) async throws -> SheetResponse? {
         
-    }
-    
-    func updateSheet(description: String, priority: Fields.Values, labels: Fields.Values, assignee: Fields.Values, imageLink: String) async throws -> EmptyResponse? {
+        var uploadedLinks : String = ""
+        
+        for link in imageLinks {
+            if uploadedLinks.isEmpty{
+                uploadedLinks = link
+                continue
+            }
+            uploadedLinks += "\n\(link)"
+        }
         
         //let tabName = "Sheet1"
         let tabName = "26-09-23"
@@ -51,7 +34,7 @@ class BugItRepository : BugItRepo {
             "majorDimension" : "ROWS" ,
             "values" : [
                 [ description ,
-                  imageLink ,
+                  uploadedLinks ,
                   (priority.enable) ? priority.value: "" ,
                   (labels.enable) ? labels.value : "" ,
                   (assignee.enable) ? assignee.value : ""
@@ -62,7 +45,7 @@ class BugItRepository : BugItRepo {
         
         
         return try await withCheckedThrowingContinuation { continuation in
-            ApiClient.shared.performRequest(url: request.BuildRequest() , type: EmptyResponse.self )
+            ApiClient.shared.performRequest(url: request.BuildRequest() , type: SheetResponse.self )
                 .sink { completion in
                     switch completion {
                     case .finished :

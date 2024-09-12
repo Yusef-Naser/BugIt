@@ -6,22 +6,29 @@
 //
 
 import SwiftUI
-import PhotosUI
+
 
 struct BugItView : View {
     
     @EnvironmentObject var appRouter : AppRouter
-    @State private var selectedImage: UIImage? = nil
-    @State private var selectedItems: [PhotosPickerItem] = []
+  
     @State private var strDescription = ""
-    @State private var imageUrl = ""
     @StateObject var viewModel = BugItViewModel()
+    @State var imageUrls : [String] = []
+    @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
         ZStack {
             VStack {
                 
                 HStack {
+                    
+                    Button(action: {
+                        presentationMode.wrappedValue.dismiss()
+                    }, label: {
+                        Image(systemName: "chevron.left")
+                    })
+                    .padding()
                     
                     Spacer()
                     
@@ -38,49 +45,13 @@ struct BugItView : View {
                 Spacer()
                 
                 Form {
-                    
-                    Section {
-                        PhotosPicker(selection: $selectedItems, maxSelectionCount: 1, matching: .images) {
-
-                                ZStack {
-                                    
-                                    if let image = selectedImage {
-                                        
-                                        RoundedRectangle(cornerRadius: 10)
-                                            .foregroundColor(.white)
-                                            .frame( height: 150)
-                                        
-                                        Image(uiImage: image)
-                                            .resizable()
-                                            .foregroundColor(.white)
-                                            .frame( height: 140)
-                                            .padding()
-                                    }else {
-                                        
-                                        RoundedRectangle(cornerRadius: 10)
-                                            .foregroundColor(.white)
-                                            .frame( height: 150)
-                                        Image(systemName: "plus")
-                                    }
-                                    
-                                }
-                            }
-                            .onChange(of: selectedItems) { newItems in
-                                Task {
-                                    selectedImage = nil
-                                    for item in newItems {
-                                        if let data = try? await item.loadTransferable(type: Data.self),
-                                           let image = UIImage(data: data) {
-                                            selectedImage = image
-                                        }
-                                    }
-                                }
-                            }
-                    } header: {
-                            Text("Attach File")
-                                .foregroundStyle(.black)
-                                .textCase(nil)
-                                .listRowInsets(EdgeInsets())
+                  
+                    if !imageUrls.isEmpty {
+                        ForEach (imageUrls.indices , id:\.self ){ index in
+                            Link("Link Image", destination: URL(string: imageUrls[index])!)
+                                .padding()
+                        }
+                        
                     }
                     
                     Section {
@@ -133,20 +104,29 @@ struct BugItView : View {
                                 .listRowInsets(EdgeInsets())
                         }
                     }
-                    
-                    if viewModel.fields.multiImages.enable {
-                        
-                    }
 
                 }
                 
-                if !imageUrl.isEmpty {
-                    Link("Link Image", destination: URL(string: imageUrl)!)
-                        .padding()
-                }
+               
                 
                
-                createHorizontalButtons
+                Button(action: {
+                    viewModel.updateSheet(description: strDescription , imageLinks: imageUrls) {
+                         presentationMode.wrappedValue.dismiss()
+                    } completionError: {
+                        appRouter.rebaseTo(.loginScreen)
+                    }
+
+                }) {
+                    Text("Update Sheet")
+                        .font(.headline)
+                        .foregroundColor(.white)
+                        .padding()
+                }
+                .background(Color.blue)
+                .cornerRadius(10)
+                .shadow(radius: 5)
+                .padding()
                 
                 Spacer()
                 
@@ -159,56 +139,15 @@ struct BugItView : View {
             }
             viewModel.loadingView()
         }
-        .onAppear(perform: {
-            getImageFromShare()
-        })
         .centralizedAlert(showAlert: $viewModel.showAlert, title: viewModel.alertTitle, message: viewModel.alertMessage)
     }
+
     
-    var createHorizontalButtons : some View {
-        HStack {
-            Button(action: {
-                if let image = selectedImage , let actualImage = image.jpegData(compressionQuality: 1){
-                    viewModel.uploadImage( image: actualImage) { url in
-                        if let url = url {
-                            self.imageUrl = url
-                            strDescription = ""
-                            selectedItems = []
-                            selectedImage = nil
-                        }
-                    }
-                }
-            }) {
-                Text("Upload Image")
-                    .font(.headline)
-                    .foregroundColor(.white)
-                    .padding()
-            }
-            .background(Color.blue)
-            .cornerRadius(10)
-            .shadow(radius: 5)
-            .padding()
-            
-            if !imageUrl.isEmpty {
-                Button(action: {
-                    viewModel.updateSheet(description: strDescription , imageLink: imageUrl) {
-                        
-                    }
-                }) {
-                    Text("Update Sheet")
-                        .font(.headline)
-                        .foregroundColor(.white)
-                        .padding()
-                }
-                .background(Color.blue)
-                .cornerRadius(10)
-                .shadow(radius: 5)
-                .padding()
-            }
-            
-        }
-        .padding()
+    func logOut () {
+        KeychainManger.shared.clear()
+        appRouter.rebaseTo(.loginScreen )
     }
+    
     
     var setupMenu : some View {
         Menu  {
@@ -224,10 +163,6 @@ struct BugItView : View {
                 viewModel.fields.assignee.enable.toggle()
             })
             
-            Button("Multi Images", action: {
-                viewModel.fields.multiImages.enable.toggle()
-            })
-            
         } label: {
             
             Image(systemName: "ellipsis")
@@ -237,38 +172,6 @@ struct BugItView : View {
                 .foregroundStyle(Color.gray)
             
         }
-    }
-    
-    func logOut () {
-        appRouter.rebaseTo(.loginScreen )
-    }
-    
-    func getImageFromShare () {
-        if let sharedImage = retrieveSharedImage() {
-            // Use the image (display it, process it, etc.)
-            print("Shared image retrieved successfully!")
-            // Example: Set it to an imageView
-            let imageView = UIImageView(image: sharedImage)
-            selectedImage = imageView.image
-        } else {
-            print("No shared image found.")
-        }
-    }
-    
-    func retrieveSharedImage() -> UIImage? {
-        let fileURL = getSharedContainerURL().appendingPathComponent("sharedImage.png")
-        if let imageData = try? Data(contentsOf: fileURL) {
-            return UIImage(data: imageData)
-        }
-        return nil
-    }
-    
-    func getSharedContainerURL() -> URL {
-        let appGroupName = "group.com.bugit.Bug-It"
-        guard let containerURL = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: appGroupName) else {
-            fatalError("Shared container not found")
-        }
-        return containerURL
     }
     
 }

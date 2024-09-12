@@ -17,11 +17,30 @@ struct LoginView : View {
     
     var body: some View {
         ZStack {
-            Button(action: signIn) {
-                Text("Sign In with Google")
-                    .font(.headline)
-                    .foregroundColor(.blue)
+            
+            VStack {
+                
+                Text("Please Login With Google")
+                    .font(.title3)
+                    .foregroundColor(.black)
+                    .padding([.top] , 16)
+                    .padding()
+                
+                Text("Login wuth google to get access to update google sheet")
+                    .font(.caption2)
+                    .foregroundColor(.black)
+                
+                Button(action: signIn) {
+                    Text("Sign In with Google")
+                        .font(.headline)
+                        .foregroundColor(.blue)
+                }
+                .padding([.top] , 32)
+                .padding()
+                
+                Spacer()
             }
+            
         }
     }
     
@@ -29,9 +48,13 @@ struct LoginView : View {
     private func signIn() {
         
         loginViewodel.googleLogin { success in
-            appRouter.pushTo(.bugItScreen)
+            appRouter.pushTo(.uploadScreen)
         }
         
     }
     
+}
+
+#Preview {
+    LoginView()
 }

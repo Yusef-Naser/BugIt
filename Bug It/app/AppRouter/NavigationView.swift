@@ -19,7 +19,7 @@ struct NavigationView : View {
         .debug("NavigationView")
         .onAppear(perform: {
             if let _ = LoginUserCase().getUserObject() {
-                appRouter.pushTo(.bugItScreen)
+                appRouter.pushTo(.uploadScreen)
             }else {
                 appRouter.pushTo(.loginScreen)
             }

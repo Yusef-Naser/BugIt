@@ -15,7 +15,6 @@ struct Fields {
     var priority : Values = Values(enable: false , value: "")
     var labels : Values = Values(enable: false , value: "")
     var assignee : Values = Values(enable: false , value: "")
-    var multiImages : Values = Values(enable: false , value: "")
     
 }
 
@@ -25,23 +24,8 @@ class BugItViewModel : BaseViewModel {
     
     @Published var fields = Fields()
     
-    func uploadImage (image : Data , success : @escaping (String?)->Void) {
-        loading = true
-        Task {
-            do {
-                let data = try await useCase.uploadImage( image: image)
-                
-                loading = false
-                success(data?.data?.link)
-                self.showAlert(message: "Success" )
-            }catch {
-                loading = false
-                self.showAlert(message: error.localizedDescription)
-            }
-        }
-    }
-    
-    func updateSheet (description : String , imageLink : String , success : @escaping ()->Void) {
+    @MainActor
+    func updateSheet (description : String , imageLinks : [String] , success : @escaping ()->Void , completionError : @escaping ()->Void ) {
         
         if description.isEmpty {
             self.showAlert(message: "Please Add Description")
@@ -66,13 +50,17 @@ class BugItViewModel : BaseViewModel {
         loading = true
         Task {
             do {
-                let data = try await useCase.updateSheet(description: description , priority: fields.priority, labels: fields.labels , assignee: fields.assignee , imageLink: imageLink)
+                let data = try await useCase.updateSheet(description: description , priority: fields.priority, labels: fields.labels , assignee: fields.assignee , imageLinks: imageLinks )
                 
                 loading = false
                 success()
                 self.showAlert(message: "Success Sheet Update" )
             }catch {
                 loading = false
+                if let error = error as? NetworkError , error.code == 401 {
+                    KeychainManger.shared.clear()
+                    completionError()
+                }
                 self.showAlert(message: error.localizedDescription)
             }
         }
