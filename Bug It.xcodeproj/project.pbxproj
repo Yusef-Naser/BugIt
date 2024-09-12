@@ -117,6 +117,7 @@
 		2C4EE15C2C92DC5A009F904F /* UploadRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadRepo.swift; sourceTree = "<group>"; };
 		2C4EE1622C92DC85009F904F /* UploadRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadRepository.swift; sourceTree = "<group>"; };
 		2C4EE1642C92DFBE009F904F /* ImageResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageResponse.swift; sourceTree = "<group>"; };
+		2C4EE1662C930DD9009F904F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		2C51E2A32C90EEC900ACDD4C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		2C51E2A82C90F85600ACDD4C /* SheetResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetResponse.swift; sourceTree = "<group>"; };
 		2C51E2AE2C9116F900ACDD4C /* ShareImageExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ShareImageExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -150,6 +151,7 @@
 		2C0D19D52C8E376A003E8C8C = {
 			isa = PBXGroup;
 			children = (
+				2C4EE1662C930DD9009F904F /* README.md */,
 				2C0D19E02C8E376A003E8C8C /* Bug It */,
 				2C51E2AF2C9116F900ACDD4C /* ShareImageExtension */,
 				2C0D19DF2C8E376A003E8C8C /* Products */,
