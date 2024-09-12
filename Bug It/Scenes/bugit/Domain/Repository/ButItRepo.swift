@@ -9,7 +9,7 @@ import Foundation
 
 protocol BugItRepo {
     
-    func uploadImage (description : String , image : Data ) async throws -> ImageResponse?
-    func updateSheet (description : String , imageLink : String) async throws -> EmptyResponse?
+    func uploadImage ( image : Data ) async throws -> ImageResponse?
+    func updateSheet (description : String , priority : Fields.Values , labels : Fields.Values , assignee : Fields.Values , imageLink : String) async throws -> EmptyResponse?
     
 }

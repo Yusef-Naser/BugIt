@@ -50,6 +50,36 @@
             endingLineNumber = "20"
             landmarkName = "googleLogin(successCompletion:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "3E268487-D8C9-4F4C-A606-4F17EAED41BB - 5402e3830077f2c9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Bug_It.LoginViewModel.googleLogin(successCompletion: (Swift.Bool) -&gt; ()) -&gt; ()"
+                  moduleName = "Bug It"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yusefnaser/Desktop/Bug%20It/Bug%20It/Scenes/Login/Presentation/LoginViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20">
+               </Location>
+               <Location
+                  uuid = "3E268487-D8C9-4F4C-A606-4F17EAED41BB - a2f33688fe56240b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Bool&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Bug_It.LoginViewModel.googleLogin(successCompletion: (Swift.Bool) -&gt; ()) -&gt; ()"
+                  moduleName = "Bug It"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yusefnaser/Desktop/Bug%20It/Bug%20It/Scenes/Login/Presentation/LoginViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -64,7 +94,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "32"
             endingLineNumber = "32"
-            landmarkName = "uploadImage(description:image:)"
+            landmarkName = "uploadImage(image:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -80,7 +110,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "35"
             endingLineNumber = "35"
-            landmarkName = "uploadImage(description:image:)"
+            landmarkName = "uploadImage(image:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -94,10 +124,68 @@
             filePath = "Bug It/Scenes/bugit/Presentation/BugItViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "19"
-            endingLineNumber = "19"
-            landmarkName = "uploadImage(description:image:success:)"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "uploadImage(image:success:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "31E0401A-46D0-4F02-A670-A24D8E986D79 - ec3eef71bbb80cc4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for closure #1 @Sendable () async -&gt; () in Bug_It.BugItViewModel.uploadImage(image: Foundation.Data, success: (Swift.Optional&lt;Swift.String&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Bug It"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yusefnaser/Desktop/Bug%20It/Bug%20It/Scenes/bugit/Presentation/BugItViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32">
+               </Location>
+               <Location
+                  uuid = "31E0401A-46D0-4F02-A670-A24D8E986D79 - 72f59fefdf0e5d96"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for closure #1 @Sendable () async -&gt; () in Bug_It.BugItViewModel.uploadImage(image: Foundation.Data, success: (Swift.Optional&lt;Swift.String&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Bug It"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yusefnaser/Desktop/Bug%20It/Bug%20It/Scenes/bugit/Presentation/BugItViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32">
+               </Location>
+               <Location
+                  uuid = "31E0401A-46D0-4F02-A670-A24D8E986D79 - 10ac832e5662d0c6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async -&gt; () in Bug_It.BugItViewModel.uploadImage(image: Foundation.Data, success: (Swift.Optional&lt;Swift.String&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Bug It"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yusefnaser/Desktop/Bug%20It/Bug%20It/Scenes/bugit/Presentation/BugItViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32">
+               </Location>
+               <Location
+                  uuid = "31E0401A-46D0-4F02-A670-A24D8E986D79 - cae5a8fc037672c7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for closure #1 @Sendable () async -&gt; () in Bug_It.BugItViewModel.uploadImage(image: Foundation.Data, success: (Swift.Optional&lt;Swift.String&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Bug It"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yusefnaser/Desktop/Bug%20It/Bug%20It/Scenes/bugit/Presentation/BugItViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -110,9 +198,73 @@
             filePath = "Bug It/Scenes/bugit/Presentation/BugItViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "uploadImage(image:success:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9820719D-ABB7-4D11-91A5-58104EA8E9C6"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ShareImageExtension/ShareViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
             startingLineNumber = "25"
             endingLineNumber = "25"
-            landmarkName = "uploadImage(description:image:success:)"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E8901C3A-1841-453B-B266-B6C4400412D3"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ShareImageExtension/ShareViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
+            landmarkName = "saveImageFrom(url:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1FBE55AE-F57D-4924-A701-AC486C59394B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ShareImageExtension/ShareViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
+            landmarkName = "saveImageFrom(url:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FBACA729-2704-4E54-AB20-FABAA755A4C8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ShareImageExtension/ShareViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "saveImage(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

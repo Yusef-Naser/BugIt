@@ -12,14 +12,14 @@ class BugItRepository : BugItRepo {
     
     var cancellables = Set<AnyCancellable>()
     
-    func uploadImage(description: String, image: Data) async throws -> ImageResponse? {
+    func uploadImage( image: Data) async throws -> ImageResponse? {
         
         let request = BaseRequest(endPoint: EndPoints.uploadImage.path , httpMethod: .post , type: .upload)
         
-        request.parameters =  [
+      //  request.parameters =  [
           //  "title" : "" ,
-            "description" : description
-        ]
+           // "description" : description
+      //  ]
         
         let imageData = ImageData(withImage: image , forKey: "image")
         
@@ -39,9 +39,8 @@ class BugItRepository : BugItRepo {
         
     }
     
-    
-    
-    func updateSheet(description: String, imageLink: String) async throws -> EmptyResponse? {
+    func updateSheet(description: String, priority: Fields.Values, labels: Fields.Values, assignee: Fields.Values, imageLink: String) async throws -> EmptyResponse? {
+        
         //let tabName = "Sheet1"
         let tabName = "26-09-23"
         
@@ -51,8 +50,13 @@ class BugItRepository : BugItRepo {
             "range" : tabName ,
             "majorDimension" : "ROWS" ,
             "values" : [
-               [ description , imageLink]
+                [ description ,
+                  imageLink ,
+                  (priority.enable) ? priority.value: "" ,
+                  (labels.enable) ? labels.value : "" ,
+                  (assignee.enable) ? assignee.value : ""
                 ]
+            ]
         ]
     
         
@@ -73,8 +77,9 @@ class BugItRepository : BugItRepo {
                 .store(in: &cancellables)
 
         }
-
+        
     }
+ 
     
     
 }

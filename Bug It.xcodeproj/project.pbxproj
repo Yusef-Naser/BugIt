@@ -43,7 +43,34 @@
 		2C51E2A42C90EEC900ACDD4C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C51E2A32C90EEC900ACDD4C /* Constants.swift */; };
 		2C51E2A72C90EFD000ACDD4C /* ImageResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C51E2A62C90EFD000ACDD4C /* ImageResponse.swift */; };
 		2C51E2A92C90F85600ACDD4C /* EmptyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C51E2A82C90F85600ACDD4C /* EmptyResponse.swift */; };
+		2C51E2B12C9116F900ACDD4C /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C51E2B02C9116F900ACDD4C /* ShareViewController.swift */; };
+		2C51E2B42C9116F900ACDD4C /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 2C51E2B32C9116F900ACDD4C /* Base */; };
+		2C51E2B82C9116F900ACDD4C /* ShareImageExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 2C51E2AE2C9116F900ACDD4C /* ShareImageExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2C51E2B62C9116F900ACDD4C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2C0D19D62C8E376A003E8C8C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2C51E2AD2C9116F900ACDD4C;
+			remoteInfo = ShareImageExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2C51E2BC2C9116F900ACDD4C /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				2C51E2B82C9116F900ACDD4C /* ShareImageExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		2C0D19DE2C8E376A003E8C8C /* Bug It.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bug It.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,6 +109,12 @@
 		2C51E2A32C90EEC900ACDD4C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		2C51E2A62C90EFD000ACDD4C /* ImageResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageResponse.swift; sourceTree = "<group>"; };
 		2C51E2A82C90F85600ACDD4C /* EmptyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyResponse.swift; sourceTree = "<group>"; };
+		2C51E2AE2C9116F900ACDD4C /* ShareImageExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ShareImageExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C51E2B02C9116F900ACDD4C /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
+		2C51E2B32C9116F900ACDD4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		2C51E2B52C9116F900ACDD4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C51E2BD2C911A2B00ACDD4C /* Bug It.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Bug It.entitlements"; sourceTree = "<group>"; };
+		2C51E2BE2C911A7A00ACDD4C /* ShareImageExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ShareImageExtension.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +127,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2C51E2AB2C9116F900ACDD4C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -101,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				2C0D19E02C8E376A003E8C8C /* Bug It */,
+				2C51E2AF2C9116F900ACDD4C /* ShareImageExtension */,
 				2C0D19DF2C8E376A003E8C8C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -109,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				2C0D19DE2C8E376A003E8C8C /* Bug It.app */,
+				2C51E2AE2C9116F900ACDD4C /* ShareImageExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -116,6 +158,7 @@
 		2C0D19E02C8E376A003E8C8C /* Bug It */ = {
 			isa = PBXGroup;
 			children = (
+				2C51E2BD2C911A2B00ACDD4C /* Bug It.entitlements */,
 				2C14D3E92C8F2C2E006743FE /* Base */,
 				2C0D1A122C8E37EA003E8C8C /* Bug-It-Info.plist */,
 				2C14D3DE2C8F27A0006743FE /* network */,
@@ -347,6 +390,17 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
+		2C51E2AF2C9116F900ACDD4C /* ShareImageExtension */ = {
+			isa = PBXGroup;
+			children = (
+				2C51E2BE2C911A7A00ACDD4C /* ShareImageExtension.entitlements */,
+				2C51E2B02C9116F900ACDD4C /* ShareViewController.swift */,
+				2C51E2B22C9116F900ACDD4C /* MainInterface.storyboard */,
+				2C51E2B52C9116F900ACDD4C /* Info.plist */,
+			);
+			path = ShareImageExtension;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -357,10 +411,12 @@
 				2C0D19DA2C8E376A003E8C8C /* Sources */,
 				2C0D19DB2C8E376A003E8C8C /* Frameworks */,
 				2C0D19DC2C8E376A003E8C8C /* Resources */,
+				2C51E2BC2C9116F900ACDD4C /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				2C51E2B72C9116F900ACDD4C /* PBXTargetDependency */,
 			);
 			name = "Bug It";
 			packageProductDependencies = (
@@ -370,6 +426,23 @@
 			productName = "Bug It";
 			productReference = 2C0D19DE2C8E376A003E8C8C /* Bug It.app */;
 			productType = "com.apple.product-type.application";
+		};
+		2C51E2AD2C9116F900ACDD4C /* ShareImageExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2C51E2B92C9116F900ACDD4C /* Build configuration list for PBXNativeTarget "ShareImageExtension" */;
+			buildPhases = (
+				2C51E2AA2C9116F900ACDD4C /* Sources */,
+				2C51E2AB2C9116F900ACDD4C /* Frameworks */,
+				2C51E2AC2C9116F900ACDD4C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ShareImageExtension;
+			productName = ShareImageExtension;
+			productReference = 2C51E2AE2C9116F900ACDD4C /* ShareImageExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -382,6 +455,9 @@
 				LastUpgradeCheck = 1530;
 				TargetAttributes = {
 					2C0D19DD2C8E376A003E8C8C = {
+						CreatedOnToolsVersion = 15.3;
+					};
+					2C51E2AD2C9116F900ACDD4C = {
 						CreatedOnToolsVersion = 15.3;
 					};
 				};
@@ -403,6 +479,7 @@
 			projectRoot = "";
 			targets = (
 				2C0D19DD2C8E376A003E8C8C /* Bug It */,
+				2C51E2AD2C9116F900ACDD4C /* ShareImageExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -415,6 +492,14 @@
 				2C0D19E92C8E376C003E8C8C /* Preview Assets.xcassets in Resources */,
 				2C0D1A042C8E37B0003E8C8C /* Preview Assets.xcassets in Resources */,
 				2C0D19E62C8E376C003E8C8C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C51E2AC2C9116F900ACDD4C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C51E2B42C9116F900ACDD4C /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -459,7 +544,34 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2C51E2AA2C9116F900ACDD4C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C51E2B12C9116F900ACDD4C /* ShareViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2C51E2B72C9116F900ACDD4C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2C51E2AD2C9116F900ACDD4C /* ShareImageExtension */;
+			targetProxy = 2C51E2B62C9116F900ACDD4C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2C51E2B22C9116F900ACDD4C /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2C51E2B32C9116F900ACDD4C /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		2C0D19EA2C8E376C003E8C8C /* Debug */ = {
@@ -584,8 +696,10 @@
 		2C0D19ED2C8E376C003E8C8C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Bug It/Bug It.entitlements";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Bug It/Preview Content\"";
@@ -598,6 +712,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -615,8 +730,10 @@
 		2C0D19EE2C8E376C003E8C8C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Bug It/Bug It.entitlements";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Bug It/Preview Content\"";
@@ -629,6 +746,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -637,6 +755,60 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bugit.Bug-It";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2C51E2BA2C9116F900ACDD4C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ShareImageExtension/ShareImageExtension.entitlements;
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ShareImageExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ShareImageExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bugit.Bug-It.ShareImageExtension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2C51E2BB2C9116F900ACDD4C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ShareImageExtension/ShareImageExtension.entitlements;
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ShareImageExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ShareImageExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bugit.Bug-It.ShareImageExtension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -660,6 +832,15 @@
 			buildConfigurations = (
 				2C0D19ED2C8E376C003E8C8C /* Debug */,
 				2C0D19EE2C8E376C003E8C8C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2C51E2B92C9116F900ACDD4C /* Build configuration list for PBXNativeTarget "ShareImageExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C51E2BA2C9116F900ACDD4C /* Debug */,
+				2C51E2BB2C9116F900ACDD4C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -15,14 +15,14 @@ class BugItUseCase {
         self.repo = repo
     }
     
-    func uploadImage (description : String , image : Data ) async throws -> ImageResponse?{
+    func uploadImage ( image : Data ) async throws -> ImageResponse?{
 
-        return  try await repo.uploadImage(description: description, image: image)
+        return  try await repo.uploadImage( image: image)
         
     }
     
-    func updateSheet (description : String , imageLink : String) async throws -> EmptyResponse? {
-        return  try await repo.updateSheet(description: description, imageLink: imageLink)
+    func updateSheet (description : String , priority : Fields.Values , labels : Fields.Values , assignee : Fields.Values , imageLink : String) async throws -> EmptyResponse? {
+        return  try await repo.updateSheet(description: description, priority: priority, labels: labels, assignee: assignee, imageLink: imageLink)
     }
     
 }
