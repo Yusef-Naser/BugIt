@@ -16,6 +16,7 @@ class UploadViewModel : BaseViewModel {
     @MainActor
     func uploadImage (images : [Data]  , success : @escaping ([String])->Void) {
         
+        linksArray = []
         guard images.count > 0 else {
             self.showAlert(message: "Please Select Images")
             return
